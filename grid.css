@@ -1,0 +1,55 @@
+/*reset the body style*/
+* {
+    border-style: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card {
+    margin: 1rem 0;
+}
+
+@supports (display: grid) {
+
+    .container {
+        max-width: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        margin: 0;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+}
+
+.img-fluid  {
+    display: block;
+    width: 100%;
+}
+
+div {
+    background-color: lightblue;
+    padding: 5px;
+    border: 1px solid cornflowerblue;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+}
+
+.card img {
+    order: -1;
+}
